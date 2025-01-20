@@ -8,10 +8,13 @@ export const collections = {
 		schema: z.object({
 			title: z.string(),
 			description: z.string(),
+			shortDescription: z.string(),
 			publishDate: z.coerce.date(),
 			tags: z.array(z.string()),
 			img: z.string(),
 			img_alt: z.string().optional(),
+			github_url: z.string(),
+			
 		}),
 	}),
 };

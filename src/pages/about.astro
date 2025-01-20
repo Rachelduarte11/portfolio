@@ -1,120 +1,170 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 
-import ContactCTA from '../components/ContactCTA.astro';
-import Hero from '../components/Hero.astro';
+import ContactCTA from "../components/ContactCTA.astro";
+import Hero from "../components/Hero.astro";
 ---
 
-<BaseLayout title="About | Jeanine White" description="About Jeanine White Lorem Ipsum">
-	<div class="stack gap-20">
-		<main class="wrapper about">
-			<Hero
-				title="About"
-				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
-			>
-				<img
-					width="1553"
-					height="873"
-					src="/assets/at-work.jpg"
-					alt="Jeanine White at work with a colleague"
-				/>
-			</Hero>
+<BaseLayout title="Sobre mí | Rachel Duarte" description="Sobre Rachel Duarte">
+  <div class="stack gap-20">
+    <main class="wrapper about">
+      <Hero
+        title="Sobre mí"
+        tagline="Gracias por pasarte por aqui. Quiero contarte un poco sobre mi"
+      >
+        <!-- <img
+          width="1553"
+          height="873"
+          src="/assets/portrait.jpg"
+          alt="Jeanine White at work with a colleague"
+        /> -->
+      </Hero>
 
-			<section>
-				<h2 class="section-title">Background</h2>
-				<div class="content">
-					<p>
-						Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy.
-						Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl condimentum
-						id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu odio ut sem nulla
-						pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.
-					</p>
-					<p>
-						Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis
-						natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl
-						condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel
-						quam elementum pulvinar etiam non.
-					</p>
-					<p>
-						Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet
-						eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra.
-						Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl
-						pretium fusce.
-					</p>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Education</h2>
-				<div class="content">
-					<p>Corporis voluptates tenetur laudantium.</p>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Skills</h2>
-				<div class="content">
-					<p>officia unde omnis</p>
-				</div>
-			</section>
-		</main>
+      <section>
+        <h2 class="section-title">Background</h2>
+        <div class="content">
+          <p>
+            Desde los 17 años descubrí mi pasión por la programación y el mundo
+            de la tecnología, una aventura que comenzó hace 4 años y que ha
+            marcado mi camino profesional. Actualmente, curso el 6to ciclo de la
+            carrera técnica en Diseño y Desarrollo de Software en el instituto
+            Certus, donde combino mi formación académica con el aprendizaje
+            autodidacta.
+          </p>
+        </div>
+        <div class="content">
+          <p>
+            A lo largo de este tiempo, he adquirido habilidades que me permiten
+            tomar decisiones acertadas, liderar equipos con confianza y
+            enfocarme en los detalles que marcan la diferencia. Creo firmemente
+            en la importancia de ofrecer la mejor experiencia al usuario, y esto
+            se refleja en mi trabajo y en cada proyecto que desarrollo. Soy una
+            persona comprometida, apasionada por la tecnología y siempre en
+            búsqueda de superar expectativas, tanto propias como de quienes
+            confían en mí.
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">Educación</h2>
+        <div class="content">
+          <ul style="list-style: none; padding: 0;">
+            <li style="display: flex; align-items: center; margin-bottom: 20px;">
+                <a href="https://www.certus.edu.pe/" target="_blank" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+                    <img 
+                        src="/assets/certus.png"  
+                        alt="Logo de Certus" 
+                        style="width: 60px; height: 60px; object-fit: cover; border-radius: 10%; margin-right: 20px;" 
+                    />
+                    <div>
+                        <strong>Instituto Privado Certus</strong><br />
+                        Diseño y Desarrollo de Software – 6to ciclo (En curso)
+                    </div>
+                </a>
+            </li>
+            <li style="display: flex; align-items: center; margin-bottom: 20px;">
+                <a href="https://platzi.com/" target="_blank" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+                    <img 
+                        src="/assets/platzi.png"
+                        alt="Logo de Platzi" 
+                        style="width: 60px; height: 60px; object-fit: cover; border-radius: 10%; margin-right: 20px;" 
+                    />
+                    <div>
+                        <strong>Platzi</strong><br />
+                        Cursos especializados en desarrollo de software, tecnologías emergentes y habilidades complementarias.
+                    </div>
+                </a>
+            </li>
+        </ul>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">Habilidades</h2>
+        <div class="content">
+          <section class="section bg-variant">
+              
+              <div class="skills center">
+                <img class="skills__img" width="46" height="46" alt="React" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" 
+                style="width: 50px; height: 50px; object-fit: cover; border-radius: 10%; margin-right: 20px;" />
+            
+                <img class="skills__img" width="46" height="46" alt="TypeScript" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+                style="width: 50px; height: 50px; object-fit: cover; border-radius: 10%; margin-right: 20px;" />
+                <img class="skills__img" width="46" height="46" alt="Angular" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg"
+                style="width: 50px; height: 50px; object-fit: cover; border-radius: 10%; margin-right: 20px;" />
+                <img class="skills__img" width="46" height="46" alt="Bootstrap" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg"
+                style="width: 50px; height: 50px; object-fit: cover; border-radius: 10%; margin-right: 20px;" />
+                <img class="skills__img" width="46" height="46" alt="CSS" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+                style="width: 50px; height: 50px; object-fit: cover; border-radius: 10%; margin-right: 20px;" />
+                <img class="skills__img" width="46" height="46" alt="HTML" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+                style="width: 50px; height: 50px; object-fit: cover; border-radius: 10%; margin-right: 20px;" />
+                <img class="skills__img" width="46" height="46" alt="JavaScript" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                style="width: 50px; height: 50px; object-fit: cover; border-radius: 10%; margin-right: 20px;" />
+                <img class="skills__img" width="46" height="46" alt="Git" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+                style="width: 50px; height: 50px; object-fit: cover; border-radius: 10%; margin-right: 20px;" />
+              </div>
+          </section> 
+        </div>
+      </section>
+    </main>
 
-		<ContactCTA />
-	</div>
+    <ContactCTA />
+  </div>
 </BaseLayout>
 
 <style>
-	.about {
-		display: flex;
-		flex-direction: column;
-		gap: 3.5rem;
-	}
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+  }
 
-	img {
-		margin-top: 1.5rem;
-		border-radius: 1.5rem;
-		box-shadow: var(--shadow-md);
-	}
+  img {
+    margin-top: 1.5rem;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-md);
+  }
 
-	section {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		color: var(--gray-200);
-	}
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: var(--gray-200);
+  }
 
-	.section-title {
-		grid-column-start: 1;
-		font-size: var(--text-xl);
-		color: var(--gray-0);
-	}
+  .section-title {
+    grid-column-start: 1;
+    font-size: var(--text-xl);
+    color: var(--gray-0);
+  }
 
-	.content {
-		grid-column: 2 / 4;
-	}
+  .content {
+    grid-column: 2 / 4;
+  }
 
-	.content :global(a) {
-		text-decoration: 1px solid underline transparent;
-		text-underline-offset: 0.25em;
-		transition: text-decoration-color var(--theme-transition);
-	}
+  .content :global(a) {
+    text-decoration: 1px solid underline transparent;
+    text-underline-offset: 0.25em;
+    transition: text-decoration-color var(--theme-transition);
+  }
 
-	.content :global(a:hover),
-	.content :global(a:focus) {
-		text-decoration-color: currentColor;
-	}
+  .content :global(a:hover),
+  .content :global(a:focus) {
+    text-decoration-color: currentColor;
+  }
 
-	@media (min-width: 50em) {
-		.about {
-			display: grid;
-			grid-template-columns: 1fr 60% 1fr;
-		}
+  @media (min-width: 50em) {
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 60% 1fr;
+    }
 
-		.about > :global(:first-child) {
-			grid-column-start: 2;
-		}
+    .about > :global(:first-child) {
+      grid-column-start: 2;
+    }
 
-		section {
-			display: contents;
-			font-size: var(--text-lg);
-		}
-	}
+    section {
+      display: contents;
+      font-size: var(--text-lg);
+    }
+  }
 </style>

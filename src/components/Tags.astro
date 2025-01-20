@@ -1,29 +1,29 @@
-<div class="pill"><slot /></div>
+<div class="tag"><slot /></div>
 
 <style>
-	.pill {
+	.tag{
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		padding: 0.5rem 1rem;
 		gap: 0.5rem;
-		color: var(--accent-text-over);
+        background-color: var(--accent-hover);
+		color: var(--accent-text-hover);
 		border: 1px solid var(--accent-regular);
-		background-color: var(--accent-regular);
 		border-radius: 10px;
-		font-size: var(--text-md);
+		font-size: var(--text-sm);
 		line-height: 1.35;
 		white-space: nowrap;
 		cursor: pointer; 
 		transition: background-color 0.2s, color 0.2s; /* Transiciones */
 	}
 
-	.pill:hover {
-		background-color: var(--accent-hover);
-		color: var(--accent-text-hover);
+	.tag:hover {
+		color: var(--accent-text-over);
+		background-color: var(--accent-regular);
 	}
 
-	.pill:focus {
+	.tag:focus {
 		outline: 2px solid var(--accent-focus);
 		outline-offset: 2px;
 	}

@@ -1,0 +1,38 @@
+---
+interface Tag {
+  name: string;
+  img_url?: string;
+}
+
+const { tags } = Astro.props as { tags: Tag[] }; // Recibimos los tags con name e img_url
+---
+
+<div class="tags">
+  {tags.map((tag) => (
+    <div class="tag">
+      {tag.img_url && (
+        <img src={tag.img_url} alt={tag.name} class="tag-image" width="20" height="20" />
+      )}
+      <span>{tag.name}</span>
+    </div>
+  ))}
+</div>
+
+<style>
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tag-image {
+  border-radius: 50%;
+}
+
+</style>

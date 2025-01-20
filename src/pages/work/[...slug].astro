@@ -6,8 +6,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ContactCTA from '../../components/ContactCTA.astro';
 import Hero from '../../components/Hero.astro';
 import Icon from '../../components/Icon.astro';
-import Pill from '../../components/Pill.astro';
+import GithubButton from '../../components/GithubButton.astro';
 import { render } from 'astro:content';
+import Tags from '../../components/Tags.astro';
 
 interface Props {
 	entry: CollectionEntry<'work'>;
@@ -37,7 +38,7 @@ const { Content } = await render(entry);
 					<Hero title={entry.data.title} align="start">
 						<div class="details">
 							<div class="tags">
-								{entry.data.tags.map((t) => <Pill>{t}</Pill>)}
+								{entry.data.tags.map((t) => <Tags>{t}</Tags>)}
 							</div>
 							<p class="description">{entry.data.description}</p>
 						</div>
@@ -46,12 +47,21 @@ const { Content } = await render(entry);
 			</header>
 			<main class="wrapper">
 				<div class="stack gap-10 content">
-					{entry.data.img && <img src={entry.data.img} alt={entry.data.img_alt || ''} />}
+					{entry.data.img && (
+						<>
+							<img src={entry.data.img} alt={entry.data.img_alt || ''} />
+							<GithubButton href={entry.data.github_url} />
+							
+						</>
+					)}
+					
 					<div class="content">
 						<Content />
 					</div>
+					
 				</div>
 			</main>
+			
 		</div>
 		<ContactCTA />
 	</div>
@@ -133,6 +143,8 @@ const { Content } = await render(entry);
 	.content :global(a:focus) {
 		text-decoration-color: currentColor;
 	}
+
+
 
 	@media (min-width: 50em) {
 		.back-link {
