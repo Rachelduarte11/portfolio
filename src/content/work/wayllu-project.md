@@ -1,7 +1,7 @@
 ---
 title: Wayllu
 publishDate: 2020-03-04 00:00:00
-img: /assets/Wayllu.png
+img: "/Rachel-Duarte-Portfolio/assets/Wayllu.png"
 img_alt: Imagenes de un diseño movil para la aplicación Wayllu
 description: |
   Tecnologías principales

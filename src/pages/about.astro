@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 import ContactCTA from "../components/ContactCTA.astro";
 import Hero from "../components/Hero.astro";
+import { getAssetPath } from "../utils";
 ---
 
 <BaseLayout title="Sobre mí | Rachel Duarte" description="Sobre Rachel Duarte">
@@ -52,7 +53,7 @@ import Hero from "../components/Hero.astro";
             <li style="display: flex; align-items: center; margin-bottom: 20px;">
                 <a href="https://www.certus.edu.pe/" target="_blank" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
                     <img 
-                        src="/assets/certus.png"  
+                        src={getAssetPath('assets/certus.png')}    
                         alt="Logo de Certus" 
                         style="width: 60px; height: 60px; object-fit: cover; border-radius: 10%; margin-right: 20px;" 
                     />
@@ -65,7 +66,7 @@ import Hero from "../components/Hero.astro";
             <li style="display: flex; align-items: center; margin-bottom: 20px;">
                 <a href="https://platzi.com/" target="_blank" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
                     <img 
-                        src="/assets/platzi.png"
+                        src={getAssetPath('/assets/platzi.png')}
                         alt="Logo de Platzi" 
                         style="width: 60px; height: 60px; object-fit: cover; border-radius: 10%; margin-right: 20px;" 
                     />

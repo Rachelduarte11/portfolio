@@ -1,11 +1,11 @@
 ---
 title: Challenge Doctums
 publishDate: 2020-03-02 00:00:00
-img: /assets/challenge-doctums.png
-img_alt: Iridescent ripples of a bright blue and pink liquid
+img: "/Rachel-Duarte-Portfolio/assets/challenge-doctums.png"
+img_alt: Imagen de un videojuego educativo
 description: |
    Tecnologías utilizadas
-shortDescription: "Desafío donde participaron más de 20 equipos. Este es un juego construido como un simulador educativo para instituciones educativas con un modelo B2B."
+shortDescription: "Ganador del desafío donde participaron más de 20 equipos. Este es un juego construido como un simulador educativo para instituciones educativas"
 tags:
   - React
   - Phaser.js

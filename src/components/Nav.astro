@@ -2,12 +2,13 @@
 import Icon from './Icon.astro';
 import ThemeToggle from './ThemeToggle.astro';
 import type { iconPaths } from './IconPaths';
+import { getAssetPath } from '../utils';
 
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
-	{ label: 'Inicio', href: '/' },
-	{ label: 'Proyectos', href: '/work/' },
-	{ label: 'Sobre mí', href: '/about/' },
+	{ label: 'Inicio', href: `${import.meta.env.BASE_URL}` },
+	{ label: 'Proyectos', href: `${import.meta.env.BASE_URL}work/` },
+	{ label: 'Sobre mí', href: `${import.meta.env.BASE_URL}about/` },
 ];
 
 /** Icon links to social media — edit these with links to your profiles! */
@@ -17,18 +18,26 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 ];
 
 /** Test if a link is pointing to the current page. */
-const isCurrentPage = (href: string) => {
-	let pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, '');
-	if (pathname.at(0) !== '/') pathname = '/' + pathname;
-	if (pathname.at(-1) !== '/') pathname += '/';
-	return pathname === href || (href !== '/' && pathname.startsWith(href));
+/** Test if a link is pointing to the current page. */
+const isCurrentPage = (href: string): boolean => {
+    // Obtén la ruta actual sin el prefijo BASE_URL
+    let pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, '').toLowerCase();
+    let adjustedHref = href.replace(import.meta.env.BASE_URL, '').toLowerCase();
+
+    // Asegúrate de que ambas rutas terminen con "/"
+    if (!pathname.endsWith('/')) pathname += '/';
+    if (!adjustedHref.endsWith('/')) adjustedHref += '/';
+
+    // Compara las rutas ajustadas
+    return pathname === adjustedHref;
 };
+
 ---
 
 <nav>
 	<div class="menu-header">
 		<a href="/" class="site-title">
-			<img src="/assets/logo/my-logo.png" alt="logo" width="60" height="60" />
+			<img src={getAssetPath('./assets/logo/my-logo.png')} alt="logo" width="60" height="60" />
 			Rachel Duarte
 		</a>
 		<menu-button>
@@ -45,10 +54,13 @@ const isCurrentPage = (href: string) => {
 			{
 				textLinks.map(({ label, href }) => (
 					<li>
-						<a aria-current={isCurrentPage(href) ? 'page' : null} class="link" href={href}>
-							{label}
-						</a>
-					</li>
+                        <a 
+                            aria-current={isCurrentPage(href) ? 'page' : null} 
+                            class={`link ${isCurrentPage(href) ? 'active' : ''}`} 
+                            href={href}>
+                            {label}
+                        </a>
+                    </li>
 				))
 			}
 		</ul>
@@ -57,11 +69,14 @@ const isCurrentPage = (href: string) => {
 		<ul class="nav-items">
 			{
 				textLinks.map(({ label, href }) => (
-					<li>
-						<a aria-current={isCurrentPage(href) ? 'page' : null} class="link" href={href}>
-							{label}
-						</a>
-					</li>
+                    <li>
+                        <a 
+                            aria-current={isCurrentPage(href) ? 'page' : null} 
+                            class={`link ${isCurrentPage(href) ? 'active' : ''}`} 
+                            href={href}>
+                            {label}
+                        </a>
+                    </li>
 				))
 			}
 		</ul>
