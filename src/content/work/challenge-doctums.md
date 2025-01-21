@@ -1,7 +1,7 @@
 ---
 title: Challenge Doctums
 publishDate: 2025-01-20
-img: "/assets/challenge-doctums.png"
+img: "/portfolio/assets/challenge-doctums.png"
 img_alt: Imagen de un videojuego educativo
 description: |
    Tecnologías utilizadas
