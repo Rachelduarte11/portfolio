@@ -1,6 +1,6 @@
 ---
 title: Challenge Doctums
-publishDate: 2020-03-02 00:00:00
+publishDate: 2025-01-20
 img: "/Rachel-Duarte-Portfolio/assets/challenge-doctums.png"
 img_alt: Imagen de un videojuego educativo
 description: |
