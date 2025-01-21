@@ -6,7 +6,7 @@ const url = new URL(Astro.request.url);
 const path = url.pathname;
 
 // If the user is not logged in, redirect them to the login page
-if (path === '/portofolio' ){
+if (path === '/portfolio' ){
   return Astro.redirect('/');
 }
 
