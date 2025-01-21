@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'http://rachelduarteportfolio.me',
+  site: 'https://esclender.github.io',
   outDir: 'dist',
   base: '/',
 });
